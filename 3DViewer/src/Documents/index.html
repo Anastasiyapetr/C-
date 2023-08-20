@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>3D VIEWER</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<h1><p align="center">3D VIEWER</p></h1>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2><a class="anchor" id="autotoc_md0"></a>
+Information</h2>
+<p>This program implements to view 3D wireframe models (3D Viewer) in the C programming language. The models themselves must be loaded from .obj files. A wireframe model is a model of an object in 3D graphics, which is a set of vertices and edges that defines the shape of the displayed polyhedral object in three-dimensional space.</p>
+<h3><a class="anchor" id="autotoc_md1"></a>
+.Obj file format for representing the definition of 3D objects</h3>
+<p>.Obj file is a geometry definition file format first developed by Wavefront Technologies. The file format is open and accepted by many 3D graphics application vendors. The .obj file format is a simple data format that represents only three-dimensional geometry, specifically the position of each vertex, the UV of each texture coordinate vertex, vertex normals and the faces that define each polygon as a list of vertices and texture vertices. Obj coordinates have no units, but Obj files can contain scale information in a readable comment line.</p>
+<h3><a class="anchor" id="autotoc_md2"></a>
+In this project, only implementing vertices and surfaces list support</h3>
+<h2><a class="anchor" id="autotoc_md3"></a>
+The program 3D Viewer</h2>
+<ul>
+<li>The program developed in C language of C11 standard using gcc compiler with use additional QT libraries and modules</li>
+<li>The program code is located in the src folder</li>
+<li>The program is build with Makefile which contains set of targets: all, install, uninstall, clean, dvi, dist, tests, gcov. Installation directory is "build"</li>
+<li>Full coverage of modules related to model loading and affine transformations with unit-tests</li>
+<li>The program supports only one model on the screen at a time</li>
+<li>The program provides the ability to:</li>
+</ul>
+<ol type="1">
+<li>Load a wireframe model from an obj file (vertices and surfaces list support only).</li>
+<li>Translate the model by a given distance in relation to the X, Y, Z axes.</li>
+<li>Rotate the model by a given angle relative to its X, Y, Z axes.</li>
+<li>Scale the model by a given value.</li>
+<li>Change the type of projection: parallel or central.</li>
+<li>Change type (solid, dashed), color and thickness of the edges, display method (none, circle, square), color and size of the vertices</li>
+<li>Choosing the background color</li>
+<li>Settings is allows saving the captured (rendered) images as bmp and jpeg files.</li>
+<li>The program allows recording small screencasts by a special button - the current custom affine transformation of the loaded object into gif-animation (640x480, 10fps, 5s)</li>
+</ol>
+<ul>
+<li>GUI implementation, based on Qt library</li>
+<li>The graphical user interface contains:</li>
+</ul>
+<ol type="1">
+<li>A button to select the model file and a field to output its name.</li>
+<li>A visualisation area for the wireframe model.</li>
+<li>Buttons and input fields for translating the model.</li>
+<li>Buttons and input fields for rotating the model.</li>
+<li>Buttons and input fields for scaling the model.</li>
+<li>Information about the uploaded model - file name, number of vertices and edges.</li>
+<li>Button for customizing the type of projection: central or parallel</li>
+<li>Button for customizing the line type: solid or dashed</li>
+<li>Button for customizing the edge color</li>
+<li>Button for customizing the thickness of the edges</li>
+<li>Button for customizing the vertex type: none, circle or square</li>
+<li>Button for customizing the vertex color;</li>
+<li>Button for customizing the vertex size;</li>
+<li>Button for customizing the background color;</li>
+<li>Button for clear output fields;</li>
+<li>Button for settings images as bmp and jpeg files;</li>
+<li>Button for make a gif. </li>
+</ol>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
